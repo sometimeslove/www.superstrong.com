@@ -29,7 +29,6 @@ class ArticleTest(TestCase):
         user.save()
         response = self.client.get(user.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        response = self.client.get('/admin/servermanager/emailsendlog/')
         response = self.client.get('admin/admin/logentry/')
         s = SideBar()
         s.sequence = 1

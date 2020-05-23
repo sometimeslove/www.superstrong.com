@@ -46,6 +46,5 @@ urlpatterns = [
                   url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
                       name='django.contrib.sitemaps.views.sitemap'),
                   url(r'^feed/$', DjangoBlogFeed()),
-                  url(r'^search', include('haystack.urls'), name='search'),
-                  url(r'', include('servermanager.urls', namespace='servermanager'))
+                  url(r'^search', include('haystack.urls'), name='search')
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

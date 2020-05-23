@@ -21,7 +21,6 @@ from DjangoBlog.logentryadmin import LogEntryAdmin
 from blog.admin import *
 from accounts.admin import *
 from oauth.admin import *
-from servermanager.admin import *
 from comments.admin import *
 
 
@@ -55,8 +54,6 @@ admin_site.register(Links, LinksAdmin)
 admin_site.register(SideBar, SideBarAdmin)
 admin_site.register(BlogSettings, BlogSettingsAdmin)
 
-admin_site.register(commands, CommandsAdmin)
-admin_site.register(EmailSendLog, EmailSendLogAdmin)
 
 admin_site.register(BlogUser, BlogUserAdmin)
 
