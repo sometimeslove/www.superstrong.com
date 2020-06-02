@@ -22,7 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n9ceqv38)#&mwuat@(mjb_p%em$e8$qyr#fw9ot!=ba6lijx-6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 # DEBUG = False
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
@@ -50,7 +51,9 @@ INSTALLED_APPS = [
     'accounts',
     'comments',
     'oauth',
-    'compressor'
+    'compressor',
+    'rest_framework',
+    'restfulapi'
 ]
 
 MIDDLEWARE = [
@@ -99,7 +102,7 @@ DATABASES = {
         'NAME': 'djangoblog',
         'USER': os.environ.get('DJANGO_MYSQL_USER'),
         'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD'),
-        'HOST':os.environ.get('DJANGO_MYSQL_HOST'),
+        'HOST':'59.110.44.152' or os.environ.get('DJANGO_MYSQL_HOST'),
         'PORT': 3306,
         'OPTIONS': {'charset': 'utf8mb4'},
     }
